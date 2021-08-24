@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
+    />
+    <link rel="stylesheet" href="./shop.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <script src="./shop.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
+
+    <title>Shop</title>
+  </head>
+  <body>
+    <div id="container">
+      <!-- Categories -->
+      <div id="category-outer">
+        <div id="category-container">
+          <!-- Categories will appear here as <p id="category-item"> -->
+        </div>
+      </div>
+      <!-- Products -->
+      <div id="splide-product" class="splide">
+        <div class="splide__track">
+          <ul id="product-container" class="splide__list">
+            <!-- Products will appear here as <li class="product"> -->
+          </ul>
+        </div>
+      </div>
+      <!-- Will be shown when clicked 'sepete ekle' button -->
+      <div id="toast">Ürün sepete eklendi.</div>
+    </div>
+  </body>
+</html>

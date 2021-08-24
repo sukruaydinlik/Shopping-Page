@@ -1,0 +1,191 @@
+html {
+  background-color: rgb(235, 235, 235);
+}
+body {
+  background-color: rgb(234, 234, 234);
+  padding: 8px;
+  margin: 0px;
+}
+
+#container {
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+  margin: 16px;
+}
+
+#category-container {
+  float: left;
+  width: 24%;
+  margin-left: 16px;
+  margin-top: 16px;
+}
+
+.category-item {
+  margin-top: 8px;
+  margin-bottom: 4px;
+  background: rgb(255, 255, 255);
+  border-left: 1px solid rgb(255, 255, 255);
+}
+.category-selected {
+  margin-top: 8px;
+  margin-bottom: 4px;
+  border-left: 1px solid rgb(0, 111, 202);
+  background: rgb(239, 247, 254);
+  color: rgb(11, 94, 215);
+}
+
+#splide-product {
+  margin: 16px;
+  width: 70%;
+  float: left;
+}
+
+.splide__arrow--prev {
+  left: -1em;
+}
+.splide__arrow--next {
+  right: -1em;
+}
+
+/* Toast CSS values*/
+#toast {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+}
+
+#toast.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+/* Toast CSS values ends here */
+
+.product {
+  border: 2px solid rgb(85, 6, 0);
+  max-width: 300px;
+}
+
+.product-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+h3 {
+  background-color: rgb(234, 234, 234);
+  margin-top: 4px;
+  margin-right: 32px;
+}
+
+/* For mobile devices */
+@media screen and (max-width: 500px) {
+  body {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+  }
+  #category-outer {
+    display: inline-flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    overflow-y: stretch;
+    width: 100%;
+  }
+  #category-container {
+    text-align: justify;
+    flex-direction: row;
+    scrollbar-width: none;
+    display: inline-flex;
+    float: none;
+    overflow-y: scroll;
+    width: 100%;
+
+    -ms-overflow-style: none; /* Hide Scrollbar for Internet Explorer, Edge */
+    scrollbar-width: none; /* Hide Scrollbar for Firefox */
+  }
+  #category-container::-webkit-scrollbar {
+    display: none; /* Hide Scrollbar for Chrome, Safari, and Opera */
+  }
+
+  .category-item {
+    padding: 8px;
+    display: inline-block;
+    background: rgb(255, 255, 255);
+    border-left: none;
+    float: none;
+  }
+
+  .category-selected {
+    padding: 8px;
+    display: inline-flex;
+    background: rgb(239, 247, 254);
+    border-bottom: 1px solid rgb(0, 111, 202);
+    border-left: none;
+  }
+
+  #container {
+    margin: 4px;
+  }
+  #splide-product {
+    margin-left: 16px;
+    width: 100%;
+  }
+  .splide__arrow--next {
+    right: +1em;
+  }
+}
