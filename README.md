@@ -1,2 +1,3 @@
 # Shopping-Page
-A case study for a shopping page written in VanillaJS
+### A case study of a dummy shopping page written in VanillaJS
+### Simply open shop.html file on browser, preferrably Chrome :)
